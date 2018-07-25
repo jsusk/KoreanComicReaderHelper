@@ -70,7 +70,7 @@
 								.text(word.WordText)
 								.css({
 									left: word.Left * zoom,
-									top: minLineTopDist,
+									top: (minLineTopDist - 15),
 									height: maxLineHeight,
 									width: word.Width * zoom,
 									fontSize: maxLineHeight * 0.8

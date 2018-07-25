@@ -720,19 +720,19 @@
 					$process.reject(err);
 				});
 
-			if (
-				(dims.width < OCR_LIMIT.min.width && dims.height < OCR_LIMIT.min.height) ||
-				(dims.width > OCR_LIMIT.max.width && dims.height > OCR_LIMIT.max.height)
-			) {
-				$ocr.reject({
-					type: 'OCR',
-					stat: 'OCR conversion failed',
-					message: OCR_DIMENSION_ERROR,
-					details: null,
-					code: null
-				});
-				return false;
-			}
+			// if (
+			// 	(dims.width < OCR_LIMIT.min.width && dims.height < OCR_LIMIT.min.height) ||
+			// 	(dims.width > OCR_LIMIT.max.width && dims.height > OCR_LIMIT.max.height)
+			// ) {
+			// 	$ocr.reject({
+			// 		type: 'OCR',
+			// 		stat: 'OCR conversion failed',
+			// 		message: OCR_DIMENSION_ERROR,
+			// 		details: null,
+			// 		code: null
+			// 	});
+			// 	return false;
+			// }
 
 			// Disable widget, show spinner
 			OCRTranslator.disableContent();
